@@ -17,7 +17,7 @@ jobs:
       - name: Validate docker-compose.yml syntax
         run: docker compose config -q
       - name: Hadolint the seeded-api Dockerfile
-        uses: hadolint/hadolint-action@v3.1.0
+        uses: hadolint/hadolint-action@v3.5.0
         with:
           dockerfile: lab-environment/docker/seeded-api/Dockerfile
       - name: npm audit (seeded-api dependencies)
