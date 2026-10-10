@@ -1,3 +1,11 @@
+# ==============================================================================
+# File Name:     18-lambda-wildcard-iam-invoke.yml
+# Description:   Implementation and logic for 18-lambda-wildcard-iam-invoke.
+# Author:        Mai Tan Duc <ducmai.network@gmail.com>
+# Created:       2026-10-10
+# Version:       1.0.0
+# License:       MIT
+# ==============================================================================
 title: Lambda Function Invoked With Wildcard IAM Action
 id: b22c8ca3-b0a4-553b-8cbf-3f2112d05fb3
 status: experimental

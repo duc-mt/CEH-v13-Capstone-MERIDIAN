@@ -1,3 +1,11 @@
+# ==============================================================================
+# File Name:     19-tls-downgrade.yml
+# Description:   Implementation and logic for 19-tls-downgrade.
+# Author:        Mai Tan Duc <ducmai.network@gmail.com>
+# Created:       2026-10-10
+# Version:       1.0.0
+# License:       MIT
+# ==============================================================================
 title: TLS Negotiation Below Minimum Accepted Version
 id: 19b62132-465f-5e4d-99dd-795ced6e133c
 status: experimental

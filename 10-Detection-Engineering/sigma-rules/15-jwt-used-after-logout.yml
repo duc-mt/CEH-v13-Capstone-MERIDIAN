@@ -1,3 +1,11 @@
+# ==============================================================================
+# File Name:     15-jwt-used-after-logout.yml
+# Description:   Implementation and logic for 15-jwt-used-after-logout.
+# Author:        Mai Tan Duc <ducmai.network@gmail.com>
+# Created:       2026-10-10
+# Version:       1.0.0
+# License:       MIT
+# ==============================================================================
 title: JWT Used After Logout Event
 id: f24c7052-1bc1-56fa-87c8-618237f3a1ed
 status: experimental

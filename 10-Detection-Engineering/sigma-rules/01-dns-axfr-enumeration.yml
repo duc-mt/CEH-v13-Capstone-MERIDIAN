@@ -1,3 +1,11 @@
+# ==============================================================================
+# File Name:     01-dns-axfr-enumeration.yml
+# Description:   Implementation and logic for 01-dns-axfr-enumeration.
+# Author:        Mai Tan Duc <ducmai.network@gmail.com>
+# Created:       2026-10-10
+# Version:       1.0.0
+# License:       MIT
+# ==============================================================================
 title: Excessive External DNS Enumeration / AXFR Attempt
 id: 4efcff07-85d5-54bf-97a6-a8de44bee66d
 status: experimental

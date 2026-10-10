@@ -1,3 +1,11 @@
+# ==============================================================================
+# File Name:     07-signed-binary-proxy-execution.yml
+# Description:   Implementation and logic for 07-signed-binary-proxy-execution.
+# Author:        Mai Tan Duc <ducmai.network@gmail.com>
+# Created:       2026-10-10
+# Version:       1.0.0
+# License:       MIT
+# ==============================================================================
 title: Suspicious Macro-Free Attachment Execution Chain
 id: 0cd3c04e-dad8-58f8-b6ed-a60a912992a1
 status: experimental

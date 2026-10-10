@@ -1,3 +1,11 @@
+# ==============================================================================
+# File Name:     05-kerberoasting.yml
+# Description:   Implementation and logic for 05-kerberoasting.
+# Author:        Mai Tan Duc <ducmai.network@gmail.com>
+# Created:       2026-10-10
+# Version:       1.0.0
+# License:       MIT
+# ==============================================================================
 title: Kerberoasting — Abnormal TGS Request Volume
 id: 36aeda99-010a-5c58-b685-a612d49a5b08
 status: experimental

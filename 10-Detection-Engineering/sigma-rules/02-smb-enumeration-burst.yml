@@ -1,3 +1,11 @@
+# ==============================================================================
+# File Name:     02-smb-enumeration-burst.yml
+# Description:   Implementation and logic for 02-smb-enumeration-burst.
+# Author:        Mai Tan Duc <ducmai.network@gmail.com>
+# Created:       2026-10-10
+# Version:       1.0.0
+# License:       MIT
+# ==============================================================================
 title: SMB Enumeration Burst (CME/enum4linux signature)
 id: 27d05fa3-6c4a-57c4-8cce-489fe2e81138
 status: experimental

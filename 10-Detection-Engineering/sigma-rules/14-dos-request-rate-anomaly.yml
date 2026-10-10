@@ -1,3 +1,11 @@
+# ==============================================================================
+# File Name:     14-dos-request-rate-anomaly.yml
+# Description:   Implementation and logic for 14-dos-request-rate-anomaly.
+# Author:        Mai Tan Duc <ducmai.network@gmail.com>
+# Created:       2026-10-10
+# Version:       1.0.0
+# License:       MIT
+# ==============================================================================
 title: Volumetric Request Rate Anomaly (Staging-Validated Pattern)
 id: 830716a4-ee83-5110-981a-e6717507d84b
 status: experimental

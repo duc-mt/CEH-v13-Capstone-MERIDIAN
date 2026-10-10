@@ -1,3 +1,11 @@
+# ==============================================================================
+# File Name:     10-idor-sequential-access.yml
+# Description:   Implementation and logic for 10-idor-sequential-access.
+# Author:        Mai Tan Duc <ducmai.network@gmail.com>
+# Created:       2026-10-10
+# Version:       1.0.0
+# License:       MIT
+# ==============================================================================
 title: IDOR / Mass Sequential Resource Access
 id: f3a1b7e2-0b12-5f22-85dd-2f95b7aa8bfe
 status: experimental

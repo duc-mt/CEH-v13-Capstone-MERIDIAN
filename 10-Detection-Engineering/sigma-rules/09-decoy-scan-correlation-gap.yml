@@ -1,3 +1,11 @@
+# ==============================================================================
+# File Name:     09-decoy-scan-correlation-gap.yml
+# Description:   Implementation and logic for 09-decoy-scan-correlation-gap.
+# Author:        Mai Tan Duc <ducmai.network@gmail.com>
+# Created:       2026-10-10
+# Version:       1.0.0
+# License:       MIT
+# ==============================================================================
 title: Nmap Decoy Scan — Multi-Source Correlation Rule
 id: bcb30062-0816-5028-afc1-1c85719d4fe0
 status: experimental

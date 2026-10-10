@@ -1,3 +1,11 @@
+# ==============================================================================
+# File Name:     06-acl-abuse.yml
+# Description:   Implementation and logic for 06-acl-abuse.
+# Author:        Mai Tan Duc <ducmai.network@gmail.com>
+# Created:       2026-10-10
+# Version:       1.0.0
+# License:       MIT
+# ==============================================================================
 title: Suspicious GenericAll Grant Usage (BloodHound Path Abuse)
 id: d8be6624-0e73-5ede-b4df-6e77ad519781
 status: experimental

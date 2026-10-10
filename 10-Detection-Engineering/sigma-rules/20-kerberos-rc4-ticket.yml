@@ -1,3 +1,11 @@
+# ==============================================================================
+# File Name:     20-kerberos-rc4-ticket.yml
+# Description:   Implementation and logic for 20-kerberos-rc4-ticket.
+# Author:        Mai Tan Duc <ducmai.network@gmail.com>
+# Created:       2026-10-10
+# Version:       1.0.0
+# License:       MIT
+# ==============================================================================
 title: Kerberos Ticket Using RC4/NTLM Encryption Type
 id: ce506bae-453b-5f09-92f6-d26a0ef75bc5
 status: experimental

@@ -1,3 +1,11 @@
+# ==============================================================================
+# File Name:     12-iam-passrole-lambda-chain.yml
+# Description:   Implementation and logic for 12-iam-passrole-lambda-chain.
+# Author:        Mai Tan Duc <ducmai.network@gmail.com>
+# Created:       2026-10-10
+# Version:       1.0.0
+# License:       MIT
+# ==============================================================================
 title: Anomalous IAM PassRole + Lambda Chain
 id: 0b513abd-eb06-5aba-827a-baad4bbfec14
 status: experimental

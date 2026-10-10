@@ -1,3 +1,11 @@
+# ==============================================================================
+# File Name:     03-scanner-signature-burst.yml
+# Description:   Implementation and logic for 03-scanner-signature-burst.
+# Author:        Mai Tan Duc <ducmai.network@gmail.com>
+# Created:       2026-10-10
+# Version:       1.0.0
+# License:       MIT
+# ==============================================================================
 title: Vulnerability Scanner Signature Burst
 id: 8f90c27d-fc4c-51f0-8c21-6a54b2f9302d
 status: experimental

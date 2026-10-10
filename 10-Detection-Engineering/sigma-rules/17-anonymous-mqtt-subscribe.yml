@@ -1,3 +1,11 @@
+# ==============================================================================
+# File Name:     17-anonymous-mqtt-subscribe.yml
+# Description:   Implementation and logic for 17-anonymous-mqtt-subscribe.
+# Author:        Mai Tan Duc <ducmai.network@gmail.com>
+# Created:       2026-10-10
+# Version:       1.0.0
+# License:       MIT
+# ==============================================================================
 title: Anonymous MQTT Broker Subscribe
 id: 1ddda608-8397-54b7-9332-0819a51ffe36
 status: experimental

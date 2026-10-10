@@ -1,3 +1,11 @@
+# ==============================================================================
+# File Name:     13-indirect-prompt-injection.yml
+# Description:   Implementation and logic for 13-indirect-prompt-injection.
+# Author:        Mai Tan Duc <ducmai.network@gmail.com>
+# Created:       2026-10-10
+# Version:       1.0.0
+# License:       MIT
+# ==============================================================================
 title: Indirect Prompt Injection via Document Upload to LLM Service
 id: 2e0caded-74ef-5095-8e83-57e692f6982a
 status: experimental
