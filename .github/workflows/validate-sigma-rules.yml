@@ -22,7 +22,7 @@ jobs:
           for f in 10-Detection-Engineering/sigma-rules/*.yml; do
             echo "::group::$f"
             sigma check "$f"
-            sigma convert -t elasticsearch "$f" > /dev/null || true
+            sigma convert -t lucene "$f" > /dev/null || true
             echo "::endgroup::"
           done
       - name: Confirm every rule has a required id/title/level

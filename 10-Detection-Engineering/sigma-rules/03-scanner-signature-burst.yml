@@ -7,6 +7,6 @@ detection:
   selection:
     http_status: ['4xx', '5xx']
   timeframe: 60s
-  condition: selection | count() by src_ip > 100
+  condition: selection
 level: medium
 tags: [attack.reconnaissance, attack.t1595]

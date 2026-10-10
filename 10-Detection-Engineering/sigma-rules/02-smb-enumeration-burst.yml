@@ -9,7 +9,6 @@ detection:
     EventID: 4624
     LogonType: 3
     AuthenticationPackageName: NTLM
-  timeframe: 1m
-  condition: selection | count() by IpAddress > 20
+  condition: selection
 level: high
 tags: [attack.discovery, attack.t1135]

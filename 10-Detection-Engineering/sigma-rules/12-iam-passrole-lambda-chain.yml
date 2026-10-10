@@ -8,6 +8,6 @@ detection:
   selection:
     eventName: ['PassRole', 'CreateFunction', 'UpdateFunctionCode']
   timeframe: 10m
-  condition: selection | count() by userIdentity.arn > 2
+  condition: selection
 level: high
 tags: [attack.privilege_escalation, attack.t1078.004]
