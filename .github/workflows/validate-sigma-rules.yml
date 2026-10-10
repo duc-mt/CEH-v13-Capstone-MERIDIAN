@@ -2,9 +2,9 @@ name: Validate Sigma Rules
 
 on:
   push:
-    paths: ["10-Detection-Engineering/sigma-rules/**"]
+    paths: ["10-Detection-Engineering/sigma-rules/**", ".github/workflows/validate-sigma-rules.yml"]
   pull_request:
-    paths: ["10-Detection-Engineering/sigma-rules/**"]
+    paths: ["10-Detection-Engineering/sigma-rules/**", ".github/workflows/validate-sigma-rules.yml"]
 
 jobs:
   sigma-check:
