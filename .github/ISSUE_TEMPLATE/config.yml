@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Project structure / usage question
+    url: https://github.com/your-org/operation-meridian/discussions
+    about: Ask about how to navigate or extend the repo before filing an issue.

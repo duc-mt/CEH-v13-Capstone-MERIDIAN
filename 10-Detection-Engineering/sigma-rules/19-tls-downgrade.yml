@@ -1,0 +1,9 @@
+title: TLS Negotiation Below Minimum Accepted Version
+id: f45-tls-downgrade
+status: experimental
+logsource: {category: network_traffic}
+detection:
+  selection: {tls_version: ['SSLv3', 'TLSv1.0', 'TLSv1.1']}
+  condition: selection
+level: medium
+tags: [attack.credential_access, attack.t1557]

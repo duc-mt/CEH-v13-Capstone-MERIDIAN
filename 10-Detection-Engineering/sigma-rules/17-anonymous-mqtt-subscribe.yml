@@ -1,0 +1,9 @@
+title: Anonymous MQTT Broker Subscribe
+id: f38-anonymous-mqtt
+status: experimental
+logsource: {category: network_traffic}
+detection:
+  selection: {dst_port: 1883, mqtt_connect_flags.username_present: false}
+  condition: selection
+level: medium
+tags: [attack.collection, attack.t1557]

@@ -1,0 +1,12 @@
+title: IDOR / Mass Sequential Resource Access
+id: f11-idor
+status: experimental
+logsource:
+  category: webserver
+detection:
+  selection:
+    url|re: '/v2/orders/\d+'
+  timeframe: 1m
+  condition: selection | count() by src_ip > 30
+level: medium
+tags: [attack.collection, attack.t1530]

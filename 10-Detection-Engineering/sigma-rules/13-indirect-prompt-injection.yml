@@ -1,0 +1,12 @@
+title: Indirect Prompt Injection via Document Upload to LLM Service
+id: f26-indirect-prompt-injection
+status: experimental
+logsource:
+  category: application
+  service: llm_gateway
+detection:
+  selection:
+    uploaded_doc_contains: ['ignore previous instructions', 'system prompt', 'disregard']
+  condition: selection
+level: medium
+tags: [attack.initial_access, attack.t1566.001]

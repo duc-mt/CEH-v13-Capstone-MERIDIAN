@@ -1,0 +1,48 @@
+{
+  "name": "Operation MERIDIAN - CEH v13 Capstone",
+  "versions": { "attack": "15", "navigator": "4.9.1", "layer": "4.5" },
+  "domain": "enterprise-attack",
+  "description": "ATT&CK technique coverage for Operation MERIDIAN (see 11-Reporting/3-ATTACK-Coverage-and-Purple-Team.md). Import at mitre-attack.github.io/attack-navigator.",
+  "sorting": 0,
+  "layout": { "layout": "side", "showAggregateScores": true },
+  "gradient": {
+    "colors": ["#ff6666", "#ffe766", "#8ec843"],
+    "minValue": 0,
+    "maxValue": 1
+  },
+  "legendItems": [
+    { "label": "Detected in-engagement", "color": "#8ec843" },
+    { "label": "Partially detected", "color": "#ffe766" },
+    { "label": "Not detected", "color": "#ff6666" }
+  ],
+  "techniques": [
+    { "techniqueID": "T1590", "score": 1, "color": "#8ec843", "comment": "F-01 DNS AXFR - Module02" },
+    { "techniqueID": "T1595", "score": 1, "color": "#8ec843", "comment": "Scanner signature - Module03/05" },
+    { "techniqueID": "T1135", "score": 1, "color": "#8ec843", "comment": "F-02 SMB enum burst - Module04" },
+    { "techniqueID": "T1190", "score": 0, "color": "#ff6666", "comment": "F-04/F-05 public app RCE - Module05/06" },
+    { "techniqueID": "T1078", "score": 0, "color": "#ff6666", "comment": "F-03 svc_backup valid-account spray - Module06" },
+    { "techniqueID": "T1078.004", "score": 0, "color": "#ff6666", "comment": "F-22 cloud account abuse - Module19" },
+    { "techniqueID": "T1134", "score": 0, "color": "#ff6666", "comment": "Token impersonation - Module06" },
+    { "techniqueID": "T1548.003", "score": 0, "color": "#ff6666", "comment": "Sudo misconfig - Module06" },
+    { "techniqueID": "T1558.003", "score": 0.5, "color": "#ffe766", "comment": "F-06 Kerberoasting, volume alert fired but not triaged - Module06" },
+    { "techniqueID": "T1484.001", "score": 0, "color": "#ff6666", "comment": "F-06 ACL/GenericAll abuse - Module06" },
+    { "techniqueID": "T1053.005", "score": 1, "color": "#8ec843", "comment": "Scheduled task persistence test - Module06" },
+    { "techniqueID": "T1070.001", "score": 1, "color": "#8ec843", "comment": "Clear-EventLog awareness test - Module06" },
+    { "techniqueID": "T1070.006", "score": 1, "color": "#8ec843", "comment": "Timestomp awareness test - Module06" },
+    { "techniqueID": "T1566.001", "score": 1, "color": "#8ec843", "comment": "Phishing attachment, partially - Module09" },
+    { "techniqueID": "T1218", "score": 0.5, "color": "#ffe766", "comment": "F-08 signed-binary proxy exec, 2/3 runs detected - Module07" },
+    { "techniqueID": "T1071.004", "score": 1, "color": "#8ec843", "comment": "DNS C2 beacon, SOC-allowlisted/validated - Module07" },
+    { "techniqueID": "T1055", "score": null, "comment": "Process injection - identified, not executed (out of RoE) - Module07" },
+    { "techniqueID": "T1557.001", "score": 1, "color": "#8ec843", "comment": "F-09 LLMNR/NBT-NS poisoning - Module08" },
+    { "techniqueID": "T1557", "score": 1, "color": "#8ec843", "comment": "ARP spoofing / MQTT MITM-adjacent - Module08/18" },
+    { "techniqueID": "T1200", "score": 1, "color": "#8ec843", "comment": "MAC spoofing NAC bypass - Module08" },
+    { "techniqueID": "T1498", "score": 1, "color": "#8ec843", "comment": "F-32 DoS staging test - Module10" },
+    { "techniqueID": "T1539", "score": 1, "color": "#8ec843", "comment": "F-33 JWT-after-logout - Module11" },
+    { "techniqueID": "T1562", "score": 0.5, "color": "#ffe766", "comment": "F-10 decoy scan, 2/10 correlated - Module12" },
+    { "techniqueID": "T1530", "score": 1, "color": "#8ec843", "comment": "F-11 IDOR mass access - Module14" },
+    { "techniqueID": "T1552.001", "score": 0, "color": "#ff6666", "comment": "F-36 hardcoded mobile secret - Module17" },
+    { "techniqueID": "T0801", "score": 1, "color": "#8ec843", "comment": "F-21 unauthorized Modbus read (ICS) - Module18" },
+    { "techniqueID": "T1552", "score": 0, "color": "#ff6666", "comment": "F-22 leaked Azure AD secret in S3 - Module19" },
+    { "techniqueID": "T1558", "score": 1, "color": "#8ec843", "comment": "F-48 Kerberos RC4 ticket - Module20" }
+  ]
+}

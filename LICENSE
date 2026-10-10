@@ -1,0 +1,20 @@
+Educational Use License (Capstone Project)
+
+Copyright (c) 2026, Operation MERIDIAN Capstone Contributors
+
+This repository documents a FICTIONAL penetration-testing engagement
+("Meridian Dynamics") created for CEH v13 capstone / training purposes.
+
+Permission is granted to use, copy, and adapt this material for personal
+study, classroom instruction, and authorized security-training programs,
+provided that:
+
+  1. Any techniques described are only ever performed against systems you
+     own or are explicitly, contractually authorized to test.
+  2. This material is not used, in whole or in part, to plan or conduct
+     unauthorized access to any computer system or network.
+  3. Attribution to the original legacy "Ethical-Hacking-Labs" baseline
+     index is retained where this content derives from it.
+
+THE MATERIAL IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND. THE
+AUTHORS ARE NOT RESPONSIBLE FOR MISUSE OF ANY TECHNIQUE DESCRIBED HEREIN.

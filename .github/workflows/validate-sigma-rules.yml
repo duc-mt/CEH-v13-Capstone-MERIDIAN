@@ -1,0 +1,47 @@
+name: Validate Sigma Rules
+
+on:
+  push:
+    paths: ["10-Detection-Engineering/sigma-rules/**"]
+  pull_request:
+    paths: ["10-Detection-Engineering/sigma-rules/**"]
+
+jobs:
+  sigma-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install sigma-cli
+        run: pip install sigma-cli
+      - name: Validate every rule parses and converts cleanly
+        run: |
+          set -e
+          for f in 10-Detection-Engineering/sigma-rules/*.yml; do
+            echo "::group::$f"
+            sigma check "$f"
+            sigma convert -t lucene -p ecs_windows "$f" > /dev/null || \
+              sigma convert -t lucene "$f" > /dev/null
+            echo "::endgroup::"
+          done
+      - name: Confirm every rule has a required id/title/level
+        run: |
+          pip install pyyaml
+          python3 - << 'PY'
+          import glob, sys, yaml
+          required = {"title", "id", "logsource", "detection", "level"}
+          bad = []
+          for path in glob.glob("10-Detection-Engineering/sigma-rules/*.yml"):
+              with open(path) as fh:
+                  rule = yaml.safe_load(fh)
+              missing = required - rule.keys()
+              if missing:
+                  bad.append((path, missing))
+          if bad:
+              for path, missing in bad:
+                  print(f"::error file={path}::missing required fields: {missing}")
+              sys.exit(1)
+          print(f"All {len(glob.glob('10-Detection-Engineering/sigma-rules/*.yml'))} rules have required fields.")
+          PY

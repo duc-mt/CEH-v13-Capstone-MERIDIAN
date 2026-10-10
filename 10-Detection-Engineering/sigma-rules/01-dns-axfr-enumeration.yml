@@ -1,0 +1,12 @@
+title: Excessive External DNS Enumeration / AXFR Attempt
+id: f01-dns-axfr
+status: experimental
+logsource:
+  category: dns
+detection:
+  selection:
+    query_count_per_source: '>50/min'
+    record_types: ['AXFR', 'ANY']
+  condition: selection
+level: medium
+tags: [attack.reconnaissance, attack.t1590]

@@ -1,0 +1,13 @@
+title: Suspicious GenericAll Grant Usage (BloodHound Path Abuse)
+id: f06-acl-abuse
+status: experimental
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 5136
+    AttributeLDAPDisplayName: 'nTSecurityDescriptor'
+  condition: selection
+level: high
+tags: [attack.privilege_escalation, attack.t1484.001]

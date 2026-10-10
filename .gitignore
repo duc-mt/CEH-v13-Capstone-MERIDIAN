@@ -1,0 +1,24 @@
+# Terraform
+lab-environment/terraform/.terraform/
+lab-environment/terraform/.terraform.lock.hcl
+lab-environment/terraform/*.tfstate
+lab-environment/terraform/*.tfstate.*
+lab-environment/terraform/*.tfvars
+lab-environment/terraform/crash.log
+
+# Node (seeded-api)
+lab-environment/docker/seeded-api/node_modules/
+lab-environment/docker/seeded-api/package-lock.json
+npm-debug.log*
+
+# OS/editor
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Never commit real evidence/credentials if you run the lab for real
+lab-environment/evidence/
+*.pem
+*.pfx
+**/real-*

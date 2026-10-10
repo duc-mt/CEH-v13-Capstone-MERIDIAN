@@ -1,0 +1,9 @@
+# Config for lycheeverse/lychee-action (link-check.yml)
+exclude = [
+  "^https://claude\\.ai",          # chat-session links, not part of the repo content
+  "^https://mitre-attack\\.github\\.io/attack-navigator"  # rate-limits CI runners heavily
+]
+accept = [200, 429]
+max_concurrency = 8
+timeout = 20
+retry_wait_time = 5

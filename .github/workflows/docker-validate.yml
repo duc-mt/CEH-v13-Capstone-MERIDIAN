@@ -1,0 +1,27 @@
+name: Docker/Compose Validate (lab-environment)
+
+on:
+  push:
+    paths: ["lab-environment/docker/**"]
+  pull_request:
+    paths: ["lab-environment/docker/**"]
+
+jobs:
+  compose-config:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: lab-environment/docker
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate docker-compose.yml syntax
+        run: docker compose config -q
+      - name: Hadolint the seeded-api Dockerfile
+        uses: hadolint/hadolint-action@v3.1.0
+        with:
+          dockerfile: lab-environment/docker/seeded-api/Dockerfile
+      - name: npm audit (seeded-api dependencies)
+        working-directory: lab-environment/docker/seeded-api
+        run: |
+          npm install --package-lock-only
+          npm audit --audit-level=critical || true   # advisory only, never blocks this training target

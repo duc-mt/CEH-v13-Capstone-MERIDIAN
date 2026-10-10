@@ -1,0 +1,58 @@
+name: New Finding
+description: Propose a new finding (F-NN) to add to the capstone
+title: "[Finding] <short title>"
+labels: ["finding"]
+body:
+  - type: input
+    id: finding-id
+    attributes:
+      label: Proposed Finding ID
+      placeholder: "F-49"
+    validations: { required: true }
+  - type: dropdown
+    id: module
+    attributes:
+      label: CEH v13 Module
+      options:
+        - "Module01 - Introduction to Ethical Hacking"
+        - "Module02 - Footprinting and Reconnaissance"
+        - "Module03 - Scanning Networks"
+        - "Module04 - Enumeration"
+        - "Module05 - Vulnerability Analysis"
+        - "Module06 - System Hacking"
+        - "Module07 - Malware Threats"
+        - "Module08 - Sniffing"
+        - "Module09 - Social Engineering"
+        - "Module10 - Denial-of-Service"
+        - "Module11 - Session Hijacking"
+        - "Module12 - Evading IDS, Firewalls, and Honeypots"
+        - "Module13 - Hacking Web Servers"
+        - "Module14 - Hacking Web Applications"
+        - "Module15 - SQL Injection"
+        - "Module16 - Hacking Wireless Networks"
+        - "Module17 - Hacking Mobile Platforms"
+        - "Module18 - IoT and OT Hacking"
+        - "Module19 - Cloud Computing"
+        - "Module20 - Cryptography"
+    validations: { required: true }
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Follow the format in 11-Reporting/1-Findings-Register.md
+    validations: { required: true }
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options: ["Critical", "High", "Medium", "Low", "Informational"]
+    validations: { required: true }
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: Technique-level only (no weaponized exploit/credential-theft code)
+          required: true
+        - label: I will add a matching Sigma rule if this is a detectable technique
+          required: false

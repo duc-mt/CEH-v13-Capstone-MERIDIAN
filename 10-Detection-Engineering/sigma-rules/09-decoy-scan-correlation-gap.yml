@@ -1,0 +1,12 @@
+title: Nmap Decoy Scan — Multi-Source Correlation Rule
+id: f10-decoy-scan
+status: experimental
+logsource:
+  category: network_traffic
+detection:
+  selection:
+    syn_scan: true
+    ttl_variance_within_burst: true
+  condition: selection
+level: medium
+tags: [attack.defense_evasion, attack.t1562]

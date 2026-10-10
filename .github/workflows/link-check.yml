@@ -1,0 +1,23 @@
+name: Link Check (internal cross-references)
+
+on:
+  push:
+    paths: ["**/*.md"]
+  pull_request:
+    paths: ["**/*.md"]
+  schedule:
+    - cron: "0 6 * * 1"   # weekly, catches external-link rot too
+
+jobs:
+  lychee:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Link Checker
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >
+            --config .lychee.toml
+            --no-progress
+            "**/*.md"
+          fail: true

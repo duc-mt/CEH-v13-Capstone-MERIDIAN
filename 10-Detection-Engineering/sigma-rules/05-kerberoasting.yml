@@ -1,0 +1,14 @@
+title: Kerberoasting — Abnormal TGS Request Volume
+id: f06-kerberoasting
+status: experimental
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4769
+    TicketEncryptionType: '0x17'
+  timeframe: 5m
+  condition: selection | count() by TargetUserName < 2 and count() by IpAddress > 15
+level: high
+tags: [attack.credential_access, attack.t1558.003]

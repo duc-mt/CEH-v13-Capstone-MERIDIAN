@@ -1,0 +1,12 @@
+title: Vulnerability Scanner Signature Burst
+id: f04-scanner-burst
+status: experimental
+logsource:
+  category: webserver
+detection:
+  selection:
+    http_status: ['4xx', '5xx']
+  timeframe: 60s
+  condition: selection | count() by src_ip > 100
+level: medium
+tags: [attack.reconnaissance, attack.t1595]

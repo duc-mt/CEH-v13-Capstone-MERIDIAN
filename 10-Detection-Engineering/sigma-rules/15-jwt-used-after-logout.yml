@@ -1,0 +1,10 @@
+title: JWT Used After Logout Event
+id: f33-jwt-after-logout
+status: experimental
+logsource: {category: application}
+detection:
+  selection: {event: 'logout'}
+  followed_by: {event: 'api_request', same_jwt_jti: true, within: 15m}
+  condition: selection and followed_by
+level: medium
+tags: [attack.credential_access, attack.t1539]

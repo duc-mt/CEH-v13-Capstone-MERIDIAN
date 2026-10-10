@@ -1,0 +1,10 @@
+title: Volumetric Request Rate Anomaly (Staging-Validated Pattern)
+id: f32-dos-rate-anomaly
+status: experimental
+logsource: {category: webserver}
+detection:
+  selection: {requests_per_second: '>3000'}
+  timeframe: 10s
+  condition: selection
+level: high
+tags: [attack.impact, attack.t1498]

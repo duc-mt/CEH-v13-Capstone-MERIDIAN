@@ -1,0 +1,18 @@
+version: "3.8"
+services:
+  juice-shop:
+    image: bkimminich/juice-shop:latest
+    ports: ["3000:3000"]
+    networks: [dmz-lab]
+
+  seeded-api:
+    build: ./seeded-api
+    ports: ["4000:4000"]
+    environment:
+      - JWT_ALG_NONE_ALLOWED=true
+      - RATE_LIMIT_DISABLED=true
+    networks: [dmz-lab]
+
+networks:
+  dmz-lab:
+    driver: bridge

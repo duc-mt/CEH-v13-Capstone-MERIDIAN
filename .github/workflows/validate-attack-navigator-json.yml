@@ -1,0 +1,36 @@
+name: Validate ATT&CK Navigator Layer
+
+on:
+  push:
+    paths: ["10-Detection-Engineering/attack-navigator-layer.json"]
+  pull_request:
+    paths: ["10-Detection-Engineering/attack-navigator-layer.json"]
+
+jobs:
+  validate-layer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate JSON + required Navigator layer keys
+        run: |
+          python3 - << 'PY'
+          import json, re, sys
+
+          with open("10-Detection-Engineering/attack-navigator-layer.json") as f:
+              layer = json.load(f)
+
+          required_top = {"name", "versions", "domain", "techniques"}
+          missing = required_top - layer.keys()
+          if missing:
+              print(f"::error::missing top-level keys: {missing}")
+              sys.exit(1)
+
+          tid_re = re.compile(r"^T\d{4}(\.\d{3})?$")
+          bad_ids = [t["techniqueID"] for t in layer["techniques"]
+                     if not tid_re.match(t["techniqueID"]) and not t["techniqueID"].startswith("T08")]
+          if bad_ids:
+              print(f"::error::malformed technique IDs: {bad_ids}")
+              sys.exit(1)
+
+          print(f"Layer OK — {len(layer['techniques'])} techniques, domain={layer['domain']}")
+          PY

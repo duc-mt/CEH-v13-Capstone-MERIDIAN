@@ -1,0 +1,28 @@
+name: Terraform Validate (lab-environment)
+
+on:
+  push:
+    paths: ["lab-environment/terraform/**"]
+  pull_request:
+    paths: ["lab-environment/terraform/**"]
+
+jobs:
+  terraform:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: lab-environment/terraform
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: "1.8.5"
+      - name: terraform fmt -check
+        run: terraform fmt -check -recursive
+      - name: terraform init (backend-less, no credentials)
+        run: terraform init -backend=false
+      - name: terraform validate
+        run: terraform validate
+      # Intentionally NO plan/apply step — this config provisions deliberately
+      # over-permissioned IAM for training purposes and must only ever be
+      # applied manually against a disposable sandbox account.

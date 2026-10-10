@@ -1,0 +1,15 @@
+title: SMB Enumeration Burst (CME/enum4linux signature)
+id: f02-smb-enum-burst
+status: experimental
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4624
+    LogonType: 3
+    AuthenticationPackageName: NTLM
+  timeframe: 1m
+  condition: selection | count() by IpAddress > 20
+level: high
+tags: [attack.discovery, attack.t1135]

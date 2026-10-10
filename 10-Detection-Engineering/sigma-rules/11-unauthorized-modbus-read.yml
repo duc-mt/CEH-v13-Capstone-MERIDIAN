@@ -1,0 +1,12 @@
+title: Unauthorized Modbus Read from Non-Engineering Subnet
+id: f21-unauthorized-modbus
+status: experimental
+logsource:
+  category: ot_network
+detection:
+  selection:
+    dst_port: 502
+    src_subnet|not_in: ['10.40.5.0/24']
+  condition: selection
+level: critical
+tags: [attack.collection, attack.ics.t0801]

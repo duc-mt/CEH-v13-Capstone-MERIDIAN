@@ -1,0 +1,9 @@
+title: Lambda Function Invoked With Wildcard IAM Action
+id: f41-lambda-wildcard-iam
+status: experimental
+logsource: {product: aws, service: cloudtrail}
+detection:
+  selection: {eventName: 'Invoke', executionRolePolicy|contains: '"Action":"*"'}
+  condition: selection
+level: high
+tags: [attack.privilege_escalation, attack.t1078.004]

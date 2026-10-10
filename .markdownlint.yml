@@ -1,0 +1,9 @@
+# Relaxed ruleset — this repo favors long reference tables and deep nesting
+# over strict prose-style markdown linting.
+default: true
+MD013: false   # line length — tables and code blocks make this unworkable
+MD033: false   # inline HTML — none used, but don't block if introduced later
+MD024:
+  siblings_only: true   # allow repeated headings like "Detection Logic" across files
+MD041: false   # first-line-heading — appendix/glossary files don't always start with H1
+MD025: false   # single H1 — some files intentionally have none (pure data/code files)
