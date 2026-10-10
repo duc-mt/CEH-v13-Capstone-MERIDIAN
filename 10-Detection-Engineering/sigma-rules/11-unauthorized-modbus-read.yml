@@ -6,7 +6,8 @@ logsource:
 detection:
   selection:
     dst_port: 502
-    src_subnet|not_in: ['10.40.5.0/24']
-  condition: selection
+  filter:
+    src_subnet: '10.40.5.0/24'
+  condition: selection and not filter
 level: critical
 tags: [attack.collection, attack.ics.t0801]
