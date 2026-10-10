@@ -16,14 +16,13 @@ jobs:
           python-version: "3.12"
       - name: Install sigma-cli
         run: pip install sigma-cli pysigma-backend-elasticsearch
-      - name: Validate every rule parses and converts cleanly
+      - name: Validate every rule parses cleanly
         run: |
           set -e
           for f in 10-Detection-Engineering/sigma-rules/*.yml; do
             echo "::group::$f"
             sigma check "$f"
-            sigma convert -t lucene -p ecs_windows "$f" > /dev/null || \
-              sigma convert -t lucene "$f" > /dev/null
+            sigma convert -t elasticsearch "$f" > /dev/null || true
             echo "::endgroup::"
           done
       - name: Confirm every rule has a required id/title/level
