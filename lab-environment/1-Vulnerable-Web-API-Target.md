@@ -3,7 +3,9 @@
 Reproduces `portal.meridiandynamics-corp.com` / `api.meridiandynamics-corp.com` (DMZ/VLAN20) for Module 11, 13, 14, 15, and 17 using [OWASP Juice Shop](https://github.com/juice-shop/juice-shop) for the SPA/session layer and a small seeded Node/Express API for the IDOR/JWT/GraphQL-specific findings Juice Shop doesn't natively cover.
 
 ## docker-compose.yml
+
 The full, CI-validated files live at [`docker/docker-compose.yml`](docker/docker-compose.yml) and [`docker/seeded-api/`](docker/seeded-api/) — excerpts below.
+
 ```yaml
 version: "3.8"
 services:
@@ -26,6 +28,7 @@ networks:
 ```
 
 ## seeded-api — Minimal Express App Reproducing This Project's Findings
+
 ```js
 // server.js — illustrative seed app for a LAB target only.
 // Deliberately vulnerable by design (training target), never deploy outside an isolated lab.
@@ -58,6 +61,7 @@ app.listen(4000, () => console.log('seeded-api on :4000'));
 ```
 
 ## Bringing It Up
+
 ```bash
 cd docker/
 docker compose up -d
@@ -66,6 +70,7 @@ curl http://localhost:4000/v2/orders/2       # reproduces Module15/Module14 IDOR
 ```
 
 ## Resetting
+
 ```bash
 docker compose down -v && docker compose up -d
 ```

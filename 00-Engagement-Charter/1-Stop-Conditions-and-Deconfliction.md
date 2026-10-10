@@ -1,6 +1,7 @@
 # Stop-Conditions & Deconfliction
 
 ## Hard Halts
+
 1. Any write access achieved to Level 0/1 OT devices.
 2. Evidence of an **active, unrelated** adversary already present — hand off to IR immediately, do not continue testing.
 3. Unintended production service degradation lasting more than 5 minutes.
@@ -8,6 +9,7 @@
 5. Any interaction with a physical safety system (fire suppression, access control).
 
 ## Deconfliction Process
+
 - Daily 09:00 sync with Blue Team lead — share planned activity window for the day.
 - All C2/beacon infrastructure IPs pre-shared and allow-listed with the SOC before use.
 - A dedicated Slack/Teams bridge channel is kept open for real-time "is this us?" checks during active testing windows.
@@ -16,7 +18,7 @@
 ## Methodology Overview — CEH v13 Phases Mapped to MITRE ATT&CK
 
 | CEH v13 Phase | Primary ATT&CK Tactics | Week |
-|---|---|---|
+| --- | --- | --- |
 | 1. Footprinting & Recon | Reconnaissance (TA0043) | 1 |
 | 2. Scanning & Enumeration | Reconnaissance, Discovery (TA0007) | 1 |
 | 3. Vulnerability Analysis | Resource Development (TA0042) | 1 |

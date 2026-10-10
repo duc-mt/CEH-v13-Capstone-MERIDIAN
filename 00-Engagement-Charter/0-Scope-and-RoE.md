@@ -1,8 +1,9 @@
 # Scope & Rules of Engagement
 
 ## Target Profile
+
 | Attribute | Detail |
-|---|---|
+| --- | --- |
 | Client | Meridian Dynamics (MDX) — fictional mid-market manufacturing + logistics group |
 | Environment | On-prem DC (VMware + Windows AD + legacy OT/SCADA), AWS (`mdx-prod`), Azure AD + M365 |
 | Engagement type | Continuous, scenario-driven Red Team (not a checklist pentest) |
@@ -10,6 +11,7 @@
 | Team | 1x Lead, 2x Operators, 1x OSINT analyst |
 
 ## In-Scope
+
 - `*.meridiandynamics-corp.com` and subdomains
 - On-prem AD forest `corp.meridiandynamics.local` (2 domains, 3 sites)
 - AWS account `mdx-prod` (VPCs, IAM, S3, Lambda, EKS)
@@ -19,14 +21,16 @@
 - Email-based social engineering (max 3 pretexts, pre-approved templates)
 
 ## Out-of-Scope
+
 - Any Purdue Level 0/1 (physical PLCs/sensors/actuators) write operations
 - Third-party SaaS not owned by MDX (payroll processor, logistics partner APIs)
 - Physical intrusion / badge cloning
 - DoS/DDoS against production (volumetric testing only in isolated staging)
 
 ## Rules of Engagement
+
 | Rule | Detail |
-|---|---|
+| --- | --- |
 | Testing window | Mon–Fri 09:00–18:00 ICT for OT-adjacent segments; 24/7 for cloud/web (non-OT) |
 | Authorized techniques | Full CEH v13 kill chain **except** destructive payloads, real-encryption ransomware simulation, physical access |
 | Credential use | Only credentials obtained during the engagement; one scoped break-glass validation at week 4 |
@@ -36,4 +40,5 @@
 | Evidence | Full command history + packet captures, encrypted, 90-day retention post-report |
 
 ## Topology Reference
+
 Full network topology, VLAN/IP addressing, and cross-module traffic-flow diagrams live in [`../topology/`](../topology/0-Network-Topology.md) — read this alongside the scope above before starting Module 02.

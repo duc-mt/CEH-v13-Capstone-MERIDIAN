@@ -14,6 +14,7 @@ A modernized, hybrid-enterprise Red Team capstone project structured around the 
 ## The Scenario
 
 **Meridian Dynamics (MDX)** — a fictional mid-market manufacturing + logistics group running a hybrid environment:
+
 - On-prem datacenter: VMware, Windows AD, legacy OT/SCADA
 - AWS (`mdx-prod`): VPCs, IAM, S3, Lambda, EKS
 - Azure AD tenant + Microsoft 365
@@ -77,7 +78,7 @@ portfolio/                                One-page executive brief + notes for p
 ## CEH v13 Module Coverage
 
 | # | Module | Folder |
-|---|---|---|
+| --- | --- | --- |
 | 01 | Introduction to Ethical Hacking | `Module01-Introduction-to-Ethical-Hacking/` |
 | 02 | Footprinting and Reconnaissance | `Module02-Footprinting-and-Reconnaissance/` |
 | 03 | Scanning Networks | `Module03-Scanning-Networks/` |
@@ -99,13 +100,12 @@ portfolio/                                One-page executive brief + notes for p
 | 19 | Cloud Computing | `Module19-Cloud-Computing/` |
 | 20 | Cryptography | `Module20-Cryptography/` |
 
-
 ## CI & Automation
 
 Every push/PR is validated automatically — nothing here is "trust the docs," it's checked:
 
 | Workflow | Validates | Triggers on |
-|---|---|---|
+| --- | --- | --- |
 | `markdown-lint.yml` | Markdown formatting consistency across all 89+ files | Any `.md` change |
 | `link-check.yml` | Every internal cross-reference (`[text](../path.md)`) actually resolves, plus external links weekly | Any `.md` change, weekly schedule |
 | `validate-sigma-rules.yml` | Every Sigma rule parses, converts cleanly, and has required fields (`title`, `id`, `logsource`, `detection`, `level`) | Changes under `10-Detection-Engineering/sigma-rules/` |
@@ -117,11 +117,13 @@ Every push/PR is validated automatically — nothing here is "trust the docs," i
 Update the `your-org/operation-meridian` placeholder in the badges above and in `.github/dependabot.yml`'s PR limits once this is pushed to your actual GitHub repo.
 
 ## Contributing & Issues
+
 See `CONTRIBUTING.md`. Use the **New Finding** issue template to propose additional findings, or the **Documentation Bug** template for broken cross-references/topology mismatches — CI's link-checker catches most of these automatically, but asset/topology consistency across modules is still a manual review item (see the PR template's checklist).
 
 ## Rules of Engagement — TL;DR
 
 Full RoE lives in `00-Engagement-Charter/`. Highlights:
+
 - No destructive payloads, no real ransomware simulation, no physical intrusion.
 - OT testing is **read-only**, Purdue Level 2–3 only — no PLC/sensor/actuator writes, ever.
 - Only synthetic canary data is used for any exfiltration demonstration.

@@ -1,5 +1,5 @@
 title: Anomalous IAM PassRole + Lambda Chain
-id: f22-iam-passrole-chain
+id: 0b513abd-eb06-5aba-827a-baad4bbfec14
 status: experimental
 logsource:
   product: aws

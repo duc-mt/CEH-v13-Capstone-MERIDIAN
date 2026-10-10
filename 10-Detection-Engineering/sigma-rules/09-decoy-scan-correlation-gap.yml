@@ -1,5 +1,5 @@
 title: Nmap Decoy Scan — Multi-Source Correlation Rule
-id: f10-decoy-scan
+id: bcb30062-0816-5028-afc1-1c85719d4fe0
 status: experimental
 logsource:
   category: network_traffic

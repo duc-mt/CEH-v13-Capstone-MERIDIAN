@@ -1,7 +1,7 @@
 # Findings Index (F-01 → F-48)
 
 | ID | Title | Module | Severity |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | F-01 | Zone transfer permitted on secondary DNS | Module02-Footprinting | Medium |
 | F-02 | Null SMB sessions on 14 hosts | Module04-Enumeration | Medium |
 | F-03 | `svc_backup` PASSWD_NOTREQD + Kerberoastable SPN | Module04-Enumeration | High |

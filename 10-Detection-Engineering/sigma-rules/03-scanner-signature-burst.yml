@@ -1,5 +1,5 @@
 title: Vulnerability Scanner Signature Burst
-id: f04-scanner-burst
+id: 8f90c27d-fc4c-51f0-8c21-6a54b2f9302d
 status: experimental
 logsource:
   category: webserver

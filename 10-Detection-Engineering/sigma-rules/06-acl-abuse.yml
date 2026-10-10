@@ -1,5 +1,5 @@
 title: Suspicious GenericAll Grant Usage (BloodHound Path Abuse)
-id: f06-acl-abuse
+id: d8be6624-0e73-5ede-b4df-6e77ad519781
 status: experimental
 logsource:
   product: windows

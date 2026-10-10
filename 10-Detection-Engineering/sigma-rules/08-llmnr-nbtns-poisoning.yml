@@ -1,5 +1,5 @@
 title: LLMNR/NBT-NS Poisoning Response Pattern
-id: f09-llmnr-poisoning
+id: 96dbe9d3-d5a6-5b43-8fb6-550a8157a3f0
 status: experimental
 logsource:
   category: network_traffic

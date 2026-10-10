@@ -3,7 +3,7 @@
 Maps this engagement's findings to the Annex A control set they evidence a gap in — turns the findings register into an audit-ready input rather than a standalone pentest report.
 
 | Annex A Control | Control Name | Findings | Gap |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | A.5.15 | Access control | F-02, F-03, F-11, F-28 | Null sessions, weak service-account policy, missing object-level auth, NFS no_root_squash |
 | A.5.17 | Authentication information | F-06, F-12, F-36, F-48 | Kerberoastable account, JWT alg:none, hardcoded mobile secret, weak Kerberos encryption |
 | A.5.23 | Information security for cloud services | F-22, F-23, F-24, F-41–F-44 | CI/CD IAM over-permission, public S3, public EKS API, unsigned containers |
@@ -19,4 +19,5 @@ Maps this engagement's findings to the Annex A control set they evidence a gap i
 | A.8.28 | Secure coding | F-13, F-37 | SQLi root cause, insecure mobile data storage |
 
 ## Coverage Summary
+
 27 of 48 findings map directly to an Annex A control gap; the remainder (process/positive-control findings like F-30, or narrowly technical ones like F-40 ZigBee key exposure) are better tracked operationally than at the ISMS-control level — see `../11-Reporting/2-Remediation-Roadmap.md` for those.

@@ -1,7 +1,7 @@
 # Tooling Reference (by class, not step-by-step weaponization)
 
 | Class | Examples | Used in |
-|---|---|---|
+| --- | --- | --- |
 | OSINT | Shodan, Censys, crt.sh, theHarvester, amass | 01 |
 | Network scanning | nmap, masscan | 02, 06 |
 | Enumeration | enum4linux-ng, crackmapexec, ldapsearch, onesixtyone | 02 |

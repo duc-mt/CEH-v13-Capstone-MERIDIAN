@@ -1,5 +1,5 @@
 title: SMB Enumeration Burst (CME/enum4linux signature)
-id: f02-smb-enum-burst
+id: 27d05fa3-6c4a-57c4-8cce-489fe2e81138
 status: experimental
 logsource:
   product: windows

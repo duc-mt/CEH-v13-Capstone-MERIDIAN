@@ -12,9 +12,11 @@ for field in graphql_schema.mutations:
 ```
 
 ## Finding
+
 **F-16** — AI-assisted fuzzing surfaced a business-logic flaw (negative order quantity → account credit) that 40+ hours of manual testing in the legacy baseline methodology had not covered.
 
 ## Detection Logic
+
 ```yaml
 title: GraphQL Business-Logic Abuse (Negative Quantity Mutation)
 logsource: {category: webserver}

@@ -65,8 +65,9 @@ This is the canonical topology every module in this repo assumes. If a module me
 ```
 
 ## Segment Summary
+
 | Segment | VLAN | CIDR | Purpose | Modules that touch it |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | DMZ / App Tier | 20 | `10.40.2.0/24` | Internet-facing API gateway, web apps | 03, 05, 06, 13, 14, 15 |
 | AD / Core Services | 10 | `10.40.1.0/24` | Domain Controllers, core infra | 03, 04, 06, 20 |
 | Dev / Build | 30 | `10.40.3.0/24` | CI/CD runners, build server, NFS export | 04, 06, 19 |
@@ -77,13 +78,15 @@ This is the canonical topology every module in this repo assumes. If a module me
 | Corp Wi-Fi | 80 | bridges to VLAN40 | `MDX-Corp` SSID, WPA2-Enterprise | 16 |
 
 ## Sites
+
 | Site | Role | Segments present |
-|---|---|---|
+| --- | --- | --- |
 | MDX-HQ-DC | Primary datacenter + HQ office | All VLANs (10/20/30/40/50/70/80) |
 | MDX-Warehouse-DC | Logistics hub | VLAN40, VLAN50 (local HMI), VLAN60 (IoT fleet), VLAN70/80 |
 | MDX-Branch-DC | Smaller regional office | VLAN40, VLAN70/80 only — no OT, no dev/build |
 
 ## Purdue Model Boundary (Critical — read before Module 18)
+
 ```text
 Level 4/5  Enterprise IT (AD, ERP, cloud) ----------------\
 Level 3    Site Operations (historian, SCADA servers)      | IN SCOPE, read-only

@@ -1,5 +1,5 @@
 title: TLS Negotiation Below Minimum Accepted Version
-id: f45-tls-downgrade
+id: 19b62132-465f-5e4d-99dd-795ced6e133c
 status: experimental
 logsource: {category: network_traffic}
 detection:

@@ -1,5 +1,5 @@
 title: Anonymous MQTT Broker Subscribe
-id: f38-anonymous-mqtt
+id: 1ddda608-8397-54b7-9332-0819a51ffe36
 status: experimental
 logsource: {category: network_traffic}
 detection:

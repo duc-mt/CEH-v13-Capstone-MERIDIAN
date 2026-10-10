@@ -1,5 +1,5 @@
 title: JWT Used After Logout Event
-id: f33-jwt-after-logout
+id: f24c7052-1bc1-56fa-87c8-618237f3a1ed
 status: experimental
 logsource: {category: application}
 detection:

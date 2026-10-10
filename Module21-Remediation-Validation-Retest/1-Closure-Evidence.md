@@ -22,6 +22,7 @@ Status:             CLOSED
 ```
 
 ## Worked Example — F-23 (fast win, typical of 0–30 day fixes)
+
 ```text
 Finding ID:        F-23
 Fix Applied:       S3 Block Public Access enabled account-wide; bucket policy
@@ -35,6 +36,7 @@ Status:             CLOSED
 ```
 
 ## Worked Example — Partial/Compensating Fix
+
 ```text
 Finding ID:        F-21
 Fix Applied:       Historian ACL updated to restrict Modbus reads to the

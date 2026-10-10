@@ -5,8 +5,9 @@ Meridian Dynamics could be compromised from an Internet-facing service through i
 **Bottom line:** the Red Team achieved full on-prem Domain Admin, full `mdx-prod` AWS account takeover, and a cross-cloud pivot into Azure AD, starting from a single unpatched internet-facing component and a weak service-account password policy. The attack path from internet-facing API to Domain Admin to cloud-account-takeover took under 72 hours of active operator time — well inside a realistic adversary dwell-to-impact window. See `../diagrams/attack-chain.md` for the full visual chain.
 
 ## Risk Register (Top Findings)
+
 | ID | Finding | CVSS/Impact | Likelihood | Risk |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | F-22 | CI/CD role → full AWS account takeover | Critical | High | **Critical** |
 | F-06 | Kerberoastable `svc_backup` → Domain Admin in 3 hops | Critical | High | **Critical** |
 | F-12 | JWT `alg:none` accepted on legacy endpoint | Critical | High | **Critical** |

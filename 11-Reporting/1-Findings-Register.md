@@ -17,7 +17,7 @@ Finding
 ## Example — F-22
 
 | Field | Value |
-|---|---|
+| --- | --- |
 | ID | F-22 |
 | Title | CI/CD IAM Role → Full AWS Account Takeover |
 | Description | The `mdx-cicd-deploy` role holds `iam:PassRole` + `lambda:CreateFunction` without a resource/condition restriction, allowing it to pass itself an admin-equivalent EC2 instance profile. |

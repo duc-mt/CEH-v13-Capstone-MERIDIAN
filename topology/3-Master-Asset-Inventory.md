@@ -3,7 +3,7 @@
 One row per distinct asset referenced anywhere in this repo. This is the "what exists" view; `../appendix/0-Findings-Index.md` is the "what was found" view; `0-Network-Topology.md` is the "how it's wired" view.
 
 | Asset | Type | Location | Owner (fictional) | Findings against it |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | Primary DC (10.40.1.10) | Windows Server 2019 | MDX-HQ-DC / VLAN10 | NetSec/AD Team | F-02, F-03, F-06, F-48 |
 | `api-gateway-02` (10.40.2.55) | nginx + custom API | MDX-HQ-DC / VLAN20 | AppDev | F-04, F-05, F-11, F-12, F-14, F-15, F-16, F-34 |
 | Build server (10.40.3.40) | Linux, NFS export | MDX-HQ-DC / VLAN30 | DevOps | F-28 |
@@ -26,4 +26,5 @@ One row per distinct asset referenced anywhere in this repo. This is the "what e
 | Internal CA | PKI | MDX-HQ-DC | NetSec | F-46, F-47 |
 
 ## Coverage Check
+
 Every finding ID (F-01 through F-48) in `../appendix/0-Findings-Index.md` traces to exactly one row above except the engagement-process findings (F-29, F-30, F-31, F-32) which are control/process validations rather than asset-specific — those are indexed by module only.

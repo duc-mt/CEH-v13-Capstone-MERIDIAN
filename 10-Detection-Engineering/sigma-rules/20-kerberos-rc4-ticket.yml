@@ -1,5 +1,5 @@
 title: Kerberos Ticket Using RC4/NTLM Encryption Type
-id: f48-kerberos-rc4
+id: ce506bae-453b-5f09-92f6-d26a0ef75bc5
 status: experimental
 logsource: {product: windows, service: security}
 detection:

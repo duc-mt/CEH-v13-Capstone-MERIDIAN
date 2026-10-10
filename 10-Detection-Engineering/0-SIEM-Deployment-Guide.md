@@ -3,15 +3,18 @@
 The 20 rules in `sigma-rules/` are currently unvalidated — written against expected log fields, never fired against real telemetry. This guide closes that gap using Security Onion (fastest path to NSM + SIEM in one) as the primary option, with a lighter ELK/Wazuh path as an alternative.
 
 ## Option A — Security Onion (recommended)
+
 ```bash
 # On a dedicated VM (≥16GB RAM, 4 vCPU), isolated management network
 git clone https://github.com/Security-Onion-Solutions/securityonion.git
 # Follow the ISO installer: https://docs.securityonion.net/en/2.4/installation.html
 # Choose "Standalone" install for a single-box lab deployment
 ```
+
 Point your `lab-environment/` hosts' log forwarding (Windows Event Forwarding for the GOAD domain controller, Docker log driver for the Juice Shop/seeded-api containers, CloudTrail → S3 → Security Onion's cloud ingest for the AWS sandbox) at this box.
 
 ## Option B — ELK + Wazuh (lighter weight)
+
 ```bash
 docker compose -f wazuh-docker/single-node/docker-compose.yml up -d
 # Wazuh agent on the GOAD DC:
@@ -19,8 +22,9 @@ docker compose -f wazuh-docker/single-node/docker-compose.yml up -d
 ```
 
 ## Log Sources to Wire Up
+
 | Source | Feeds which rules |
-|---|---|
+| --- | --- |
 | Windows Security event log (GOAD DC) | 02, 05, 06, 07, 20 |
 | DNS server query log | 01 |
 | Juice Shop / seeded-api access log | 03, 04, 10, 15 |

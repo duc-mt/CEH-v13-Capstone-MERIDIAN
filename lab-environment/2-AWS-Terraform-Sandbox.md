@@ -3,11 +3,14 @@
 Reproduces the `mdx-cicd-deploy` role chain (F-22, Module19) in a **throwaway AWS sandbox account you control** — never a shared or production account. This mirrors the approach of public training projects like BishopFox's IAM Vulnerable.
 
 ## Prerequisites
+
 - A dedicated AWS sandbox account (consider AWS Organizations + a disposable member account, or an account with hard billing alerts/guardrails set)
 - Terraform ≥1.5, AWS CLI configured with sandbox credentials only
 
 ## main.tf
+
 The full, CI-validated file lives at [`terraform/main.tf`](terraform/main.tf) — excerpt below.
+
 ```hcl
 terraform {
   required_providers {
@@ -79,6 +82,7 @@ resource "random_id" "suffix" { byte_length = 4 }
 ```
 
 ## Validating the Chain
+
 ```bash
 terraform init && terraform plan && terraform apply
 
@@ -89,6 +93,7 @@ aws iam simulate-principal-policy \
 ```
 
 ## Teardown (do this every time)
+
 ```bash
 terraform destroy
 ```

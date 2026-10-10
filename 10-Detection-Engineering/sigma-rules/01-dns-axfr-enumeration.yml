@@ -1,5 +1,5 @@
 title: Excessive External DNS Enumeration / AXFR Attempt
-id: f01-dns-axfr
+id: 4efcff07-85d5-54bf-97a6-a8de44bee66d
 status: experimental
 logsource:
   category: dns
