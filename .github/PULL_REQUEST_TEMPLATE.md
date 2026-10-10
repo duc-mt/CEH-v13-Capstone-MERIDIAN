@@ -3,6 +3,7 @@
 <!-- One or two sentences. Which module(s)/finding(s)/topology file(s)? -->
 
 ## Checklist
+
 - [ ] Fictional org/scenario only — no real, non-consensual targets named or implied
 - [ ] Exploitation/credential-theft content stays at technique + ATT&CK-ID level (see `CONTRIBUTING.md`), unless this PR is scoped to `lab-environment/` content for your own isolated lab
 - [ ] New finding follows the format in `11-Reporting/1-Findings-Register.md`

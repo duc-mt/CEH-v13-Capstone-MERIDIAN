@@ -15,7 +15,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Install sigma-cli
-        run: pip install sigma-cli
+        run: pip install sigma-cli pysigma-backend-elasticsearch
       - name: Validate every rule parses and converts cleanly
         run: |
           set -e
