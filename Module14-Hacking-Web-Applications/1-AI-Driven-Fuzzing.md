@@ -5,7 +5,9 @@ An LLM-assisted fuzz harness was used to generate semantically valid-but-malicio
 ```python
 # Harness pattern (simplified) — LLM proposes schema-aware mutations, harness replays + scores responses
 for field in graphql_schema.mutations:
-    candidate_payloads = llm_propose_edge_cases(field)   # e.g. negative qty, oversized string, type confusion
+    candidate_payloads = llm_propose_edge_cases(
+        field
+    )  # e.g. negative qty, oversized string, type confusion
     for payload in candidate_payloads:
         resp = send_graphql(field, payload)
         score_anomaly(resp)  # 500 errors, auth bypass, data leakage signatures
