@@ -13,7 +13,7 @@ jobs:
       run:
         working-directory: lab-environment/docker
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Validate docker-compose.yml syntax
         run: docker compose config -q
       - name: Hadolint the seeded-api Dockerfile

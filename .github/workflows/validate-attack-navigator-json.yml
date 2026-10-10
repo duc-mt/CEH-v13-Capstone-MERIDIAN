@@ -10,7 +10,7 @@ jobs:
   validate-layer:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Validate JSON + required Navigator layer keys
         run: |
           python3 - << 'PY'
