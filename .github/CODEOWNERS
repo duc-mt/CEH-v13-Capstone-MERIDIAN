@@ -1,7 +1,2 @@
-# Default owner for the whole repo — replace with your GitHub handle(s)
-* @your-github-handle
-
-# Narrower ownership if you split this across a team
-/lab-environment/ @your-github-handle
-/10-Detection-Engineering/ @your-github-handle
-/12-GRC-Compliance-Mapping/ @your-github-handle
+# Code Owners for pull request reviews
+* @duc-mt
